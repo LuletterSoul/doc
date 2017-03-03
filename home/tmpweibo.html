@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> ttt </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+  <!--
+  var xx=1;
+function Down()
+{
+  
+   var date=new Date();
+  var h=date.getHours();
+  var m = date.getMinutes(); 
+  var s = date.getSeconds();
+  if(h<10) h="0"+h;
+  if(m<10) m="0"+m;
+  if(s<10) s="0"+s;
+  var str=h+":"+m+":"+s
+//document.getElementById('dqsj').innerHTML="插件启动时间:<font color='red' SIZE='40'>"+str+"</font>";
+  //document.getElementById('myVB').click();
+ // document.getElementById('fws').innerHTML="你的微博新增访问量：<font color='white' SIZE='40'>"+(xx++)+"</FONT>次";
+  window.open("http://blog.sina.com.cn/s/blog_99201d890102x5zy.html","newwindow","height=10,width=10,top=0,left=0,toolbar=no");
+  //document.frames('wid')[0].location.reload();
+  //document.getElementById("wid").reload();
+  //parent.wid.location.reload();
+  top.wid.location.href = "http://blog.sina.com.cn/s/blog_99201d890102x5zy.html";
+ // xx++;
+  //document.getElementById('page').src='http://blog.sina.com.cn/s/blog_99201d8901011y54.html';
+ // window.location(http://blog.sina.com.cn/s/blog_99201d8901011y54.html);
+  //window.open( "about:blank ", " http://blog.sina.com.cn/s/blog_99201d8901011y54.html", " "); 
+  if(xx==500000){
+   window.close();
+ //try{window.opener.closewin()}catch(e){alert(\ "父窗口已经关闭了呀！\ ")} 
+  }
+  down = setTimeout("Down()", 10*1000);
+ //setInterval("Down()",1000)
+  //document.getElementById('page').src='';
+  //document.location.reload();
+}
+var timeStr=1;
+var hour=0;
+var min=0;
+var sec=1;
+function Js(){
+timeStr++;
+time = setTimeout("Js()", 1000);
+time = setTimeout("dqTime()", 1000);
+if(sec>59){
+  if(min>59){
+    hour++;
+	min=0;
+  }else{
+   min++;
+   sec=0;
+  }
+}else{
+  sec++;
+}
+//document.getElementById('js').innerHTML="程序执行时间(秒):<font color='white' SIZE='40'>"+timeStr
+//+" </font>sec<br>   程序累计执行时间:<font color='white' SIZE='40'>"+(hour)+'时'+(min)+'分'+(sec)+"秒</font>";
+var tip = "程序执行次数(次/秒):"+timeStr+"次，程序累计执行时间:"+(hour)+'时'+(min)+'分'+(sec)+"秒";
+//console.log(tip);
+
+}
+function timeIt()
+{
+  Down();
+  Js();
+}
+
+function dqsj(){
+time=setTimeout("dqTime()", 1000);
+}
+  //-->
+  </script>
+
+  <script type="text/javascript">
+  <!--
+	function getTime(){
+  var date=new Date();
+  var h=date.getHours();
+  var m = date.getMinutes(); 
+  var s = date.getSeconds();
+  if(h<10) h="0"+h;
+  if(m<10) m="0"+m;
+  if(s<10) s="0"+s;
+  var str=h+":"+m+":"+s
+  //document.getElementById('str').innerHTML="插件启动时间:<font color='white' SIZE='40'>"+str+"</font>";
+}
+  //-->
+  </script>
+  <script type="text/javascript">
+  <!--
+function dqTime(){
+  var date=new Date();
+  var h=date.getHours();
+  var m = date.getMinutes(); 
+  var s = date.getSeconds();
+  if(h<10) h="0"+h;
+  if(m<10) m="0"+m;
+  if(s<10) s="0"+s;
+  var str=h+":"+m+":"+s;
+ // document.getElementById('dq').innerHTML="<font color='white' SIZE='10'>当前时间："+str+"</font>";
+}
+  //-->
+  </script>
+
+ </head>
+
+ <body onload="timeIt();getTime();" style='background-color:gray;'>
+ <div>
+  <span>
+		<span>
+</div>
+
+ <div style="float:left;border:0px solid red;width:100%">
+		<marquee width='500px' align='center'>
+		<div>
+		 <span id='dq' width='100px' height='70px'/>
+		 <div>
+		</marquee>
+ </div>
+
+ <div>
+		<iframe  src='http://blog.sina.com.cn/s/blog_99201d890102x5zy.html' height="950px" id='wid' name='wid' width='100%'>
+		</iframe>
+ </div>
+
+ <div style="float:left;border:0px solid red;width:100%;">
+	 <span id='fws' width='200' height='130'> </span>&nbsp;&nbsp;&nbsp;
+	  <span id='js'  width='200' height='130'> </span>&nbsp;&nbsp;&nbsp;&nbsp;
+	  <span id='dqsj' width='200' height='130'/>
+	  <span id='str' width='200' height='130'/>
+	 
+	 <marquee>  </marquee>
+ </div>
+
+
+
+
+ </body>
+</html>
