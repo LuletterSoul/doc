@@ -1,0 +1,13 @@
+Ê¾Àý2:   
+select deptno,ename,sal,sum(sal) over(partition by deptno order by ename) he from emp;   
+½á¹û:   
+10  CLARK   2450    2450   
+10  KING    5000    7450   
+10  MILLER  1300    8750   
+20  ADAMS   1100    1100   
+20  FORD    3000    4100   
+20  JONES   2975    7075   
+20  SCOTT   3000    10075   
+20  SMITH   800 10875   
+30  ALLEN   1600    1600   
+30  BLAKE   2850    4450 
