@@ -8,3 +8,4 @@ docker exec -it 容器id或者名称  /bin/bash  用交换模式进入容器
 docker ps 查看up下的容器情况
 docker rm 容器id或者名称  
 docker build -t iechenyb/website:1.0 ./x/y/   后者为dockerfile目录，默认为.，即当前目录。
+docker run -d -p 80:80 --name tomcat80 tomcat:latest  后台启动tomcat
