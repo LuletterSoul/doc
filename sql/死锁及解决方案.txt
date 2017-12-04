@@ -17,6 +17,10 @@ select * from v$session t1, v$locked_object t2 where t1.sid = t2.SESSION_ID;
 如有記錄則表示有lock，記錄下SID和serial# ，將記錄的ID替換下面的738,1429，即可解除LOCK 
 alter system kill session '738,1429'; 
 
+查看死锁sql语句
+select sql_text from v$sql where hash_value in 
+(select sql_hash_value from v$session where sid in
+(select session_id from v$locked_object))
 
 用这个可以查：  select s.sid,s.machine,o.object_name,l.oracle_username,l.locked_mode, 'ALTER  SYSTEM  KILL  SESSION  '''||s.sid||',  '||s.serial#||''';'   Command  from  v$locked_object  l,v$session  s,all_objects  o  where  l.session_id=s.sid  and  l.object_id=o.object_id  可以查看哪台机器哪个用户锁了记录, 其中command是用来杀掉锁住记录的session 
 ****************************************************************************************************************** 
